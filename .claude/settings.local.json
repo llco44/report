@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000/api/statuses)",
+      "Bash(curl -s http://localhost:3000/api/auth/setup)",
+      "Bash(curl -s http://localhost:3000/report)",
+      "Bash(curl -s http://localhost:3000/api/questions)",
+      "Bash(curl -s http://localhost:3000/admin/login)",
+      "Bash(curl -s http://localhost:3000/status)",
+      "Bash(curl -s http://localhost:3000/admin)",
+      "Bash(npm uninstall *)",
+      "Bash(node -e \"const r = require\\('/Users/alishamah/Development/projects/rama/node_modules/resend'\\); console.log\\(Object.keys\\(r\\)\\)\")"
+    ]
+  }
+}

@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --page-bg:   #f8fafc;
+  --card-bg:   #ffffff;
+  --border:    #e2e8f0;
+  --text-1:    #0f172a;
+  --text-2:    #64748b;
+  --blue-1:    #1e3a8a;
+  --blue-2:    #1d4ed8;
+  --blue-3:    #3b82f6;
+  --header-bg: #1d4ed8;
+}
+
+html.dark {
+  --page-bg:   #0a0f1e;
+  --card-bg:   #0f1e3d;
+  --border:    rgba(255,255,255,0.10);
+  --text-1:    #e2e8f0;
+  --text-2:    #94a3b8;
+  --header-bg: #0f1e3d;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', 'Tahoma', Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--text-1);
+  min-height: 100vh;
+  transition: background 0.2s, color 0.2s;
 }
+
+[dir="rtl"] {
+  font-family: 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+}
+
+/* ── Animations ───────────────────────────────────── */
+@keyframes slide-up {
+  from { opacity:0; transform: translateY(20px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity:0; }
+  to   { opacity:1; }
+}
+
+.animate-slide-up  { animation: slide-up  0.5s ease both; }
+.animate-fade-in   { animation: fade-in   0.4s ease both; }
+.delay-100 { animation-delay: 0.08s; }
+.delay-200 { animation-delay: 0.16s; }
+.delay-300 { animation-delay: 0.24s; }
+
+/* ── Custom scrollbar ─────────────────────────────── */
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-track { background: var(--page-bg); }
+::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+
+/* ── Input focus ring ─────────────────────────────── */
+.field-input {
+  width: 100%;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 13px 16px;
+  font-size: 16px; /* 16px prevents iOS Safari auto-zoom on focus */
+  color: var(--text-1);
+  background: var(--card-bg);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  outline: none;
+}
+.field-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
+}
+.field-input::placeholder { color: #94a3b8; }
+
+/* ── Status badge ─────────────────────────────────── */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ── Dark mode card overrides ─────────────────────── */
+html.dark .bg-white { background: var(--card-bg) !important; }
+html.dark .border-gray-100,
+html.dark .border-gray-200 { border-color: var(--border) !important; }
+html.dark .text-gray-800,
+html.dark .text-gray-900 { color: var(--text-1) !important; }
+html.dark .text-gray-500,
+html.dark .text-gray-600 { color: var(--text-2) !important; }
+html.dark .bg-gray-50,
+html.dark .bg-gray-100 { background: rgba(255,255,255,0.04) !important; }
+html.dark .divide-gray-50 > * + * { border-color: rgba(255,255,255,0.06) !important; }
