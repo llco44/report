@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: 'var(--page-bg)' }}>
       <SiteHeader />
-  <div className="fixed top-[60px] -left-[64px] z-0 pointer-events-none">
+  <div className="hidden md:block fixed top-[60px] -left-[64px] z-0 pointer-events-none">
   <Image
     src="/etarmamyyi.png"
     alt="Frame"
@@ -28,14 +28,22 @@ export default function HomePage() {
 </div>
       
       <main className="relative z-10 flex-1 flex flex-col items-center px-4 pt-20 pb-10">
-<div className="fixed bottom-16 left-1/2 -translate-x-1/2 z-50 text-xs text-[#94a3b8] whitespace-nowrap text-center pointer-events-none">
-  إعداد وتصميم مشرفة الصيانة / رشا البلوي
-</div>
-<div className="fixed bottom-6 left-6 z-20 text-[#14b8a6] font-bold text-sm leading-relaxed">
-  <p>مركز التأهيل الشامل</p>
-  <p>بمكة المكرمة</p>
-  <p>قسم الإناث</p>
-</div>
+        <footer className="fixed bottom-0 left-0 w-full p-4 bg-[var(--page-bg)] z-50 flex items-end justify-center">
+
+  {/* جهة اليسار: مركز التأهيل الشامل (باستخدام absolute) */}
+  <div className="absolute left-4 bottom-4 text-sm font-bold text-[#14b8a6] flex flex-col items-start">
+    <p>مركز التأهيل الشامل</p>
+    <p>بمكة المكرمة</p>
+    <p>قسم الإناث</p>
+  </div>
+
+  {/* في المنتصف: رشا والصيانة */}
+  <div className="text-xs text-[#94a3b8] flex flex-col items-center">
+    <p>إعداد وتصميم مشرفة الصيانة / رشا البلوي</p>
+    <p>مركز الصيانة © 2026</p>
+  </div>
+
+</footer>
         {/* ── Hero ── */}
         <div className="w-full max-w-xl text-center mb-8 sm:mb-14 animate-slide-up">
 
