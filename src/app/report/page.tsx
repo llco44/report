@@ -231,7 +231,20 @@ export default function ReportPage() {
                 />
               ))
             )}
+{/* Priority */}
+<div>
+  <label className="block text-sm font-bold text-gray-700 mb-2">
+    الأولوية
+  </label>
 
+  <select className="field-input">
+    <option>عادي</option>
+    <option>متوسط</option>
+    <option>عاجل</option>
+  </select>
+</div>
+
+{/* Media upload */}
             {/* Media upload */}
             {!loading && !questionsError && (
               <div>

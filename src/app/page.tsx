@@ -1,5 +1,5 @@
 'use client'
-
+import Image from 'next/image'
 import Link from 'next/link'
 import SiteHeader from '@/components/SiteHeader'
 import { useLanguage } from '@/context/language'
@@ -10,9 +10,32 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: 'var(--page-bg)' }}>
       <SiteHeader />
-
-      <main className="flex-1 flex flex-col items-center px-4 pt-8 sm:pt-16 pb-10">
-
+  <div className="fixed top-[60px] -left-[64px] z-0 pointer-events-none">
+  <Image
+    src="/etarmamyyi.png"
+    alt="Frame"
+    width={500}
+    height={350}
+  />
+</div>
+   <div className="absolute top-24 right-8 z-0 pointer-events-none">
+  <Image
+    src="/sheww.svg"
+    alt="Logo"
+    width={180}
+    height={90}
+  />
+</div>
+      
+      <main className="flex-1 flex flex-col items-center justify-center px-4 pb-10 -mt-6">
+<div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 text-xs text-[#94a3b8]">
+                 اعداد وتصميم مشرفة الصيانة/ رشا البلوي  
+</div>
+<div className="fixed bottom-10 left-8 text-left font-bold text-[#0ea5a4] leading-relaxed">
+  <div>مركز التأهيل الشامل</div>
+  <div>بمكة المكرمة</div>
+  <div>قسم الإناث</div>
+</div>
         {/* ── Hero ── */}
         <div className="w-full max-w-xl text-center mb-8 sm:mb-14 animate-slide-up">
 
