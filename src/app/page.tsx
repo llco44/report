@@ -16,32 +16,33 @@ export default function HomePage() {
     alt="Frame"
     width={500}
     height={350}
+
   />
 </div>
-   <div className="absolute top-20 right-8 z-0 pointer-events-none">
   <Image
-    src="/sheww.svg"
-    alt="Logo"
-    width={150}
-    height={70}
-  />
-</div>
+  src="/sheww.svg"
+  alt="Logo"
+  width={150} // الحجم الأصلي للشاشات الكبيرة
+  height={70}
+  className="w-[80px] h-auto md:w-[150px] md:h-auto" // [80px للجوال] و [150px للابتوب]
+/>
 
       
       <main className="relative z-10 flex-1 flex flex-col items-center px-4 pt-20 pb-10">
-      <footer className="fixed bottom-0 left-0 w-full p-4 bg-[var(--page-bg)] z-50 flex justify-between items-end">
+   <footer dir="ltr" className="fixed bottom-0 left-0 w-full p-4 bg-[var(--page-bg)] z-[100] flex justify-between items-end">
   
-  {/* جهة اليسار: رشا والصيانة */}
-  <div className="text-xs text-[#94a3b8] flex flex-col items-start pl-4">
-    <p>إعداد وتصميم مشرفة الصيانة / رشا البلوي</p>
-    <p>مركز الصيانة © 2026</p>
+  {/* أقصى اليسار: مركز التأهيل الشامل (ثابت) */}
+  <div className="text-sm font-bold text-[#14b8a6] flex flex-col items-start pl-4">
+    <p>مركز التأهيل الشامل</p>
+      <p> بمكة المكرمة </p>
+       <p> قسم الإناث</p>
+    <p className="text-xs text-gray-500"></p>
   </div>
 
-  {/* جهة اليمين: مركز التأهيل الشامل */}
-  <div className="text-sm font-bold text-[#14b8a6] flex flex-col items-end pr-4">
-    <p>مركز التأهيل الشامل</p>
-    <p>بمكة المكرمة</p>
-    <p>قسم الإناث</p>
+  {/* أقصى اليمين: رشا والصيانة (ثابت) */}
+  <div className="text-xs text-[#94a3b8] flex flex-col items-end pr-4">
+    <p>إعداد وتصميم مشرفة الصيانة / رشا البلوي</p>
+    <p> © 2026</p>
   </div>
 
 </footer>
