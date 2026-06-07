@@ -10,24 +10,15 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: 'var(--page-bg)' }}>
       <SiteHeader />
-  <div className="hidden md:block fixed top-[60px] -left-[64px] z-0 pointer-events-none">
-  <Image
-    src="/etarmamyyi.png"
-    alt="Frame"
-    width={500}
-    height={350}
-
-  />
-</div>
-<div className="md:hidden fixed top-[100px] left-[5%] w-[90%] z-0 pointer-events-none">
+     <div className="hidden md:block fixed top-[58px] left-[0px] z-0 pointer-events-none">
   <Image 
-    src="/etarmamyyi.png" 
-    alt="Frame Mobile" 
-    width={300} 
-    height={200} 
-    className="w-full h-auto"
+  src="/etarmamyyi.png" 
+  alt="Frame" 
+  width={500} 
+  height={350}
   />
 </div>
+
   <div className="absolute top-20 right-8 z-0 pointer-events-none" style={{ right: '2rem', left: 'auto' }}>
   <Image
     src="/sheww.svg"
