@@ -27,14 +27,14 @@ export default function HomePage() {
   />
 </div>
       
-      <main className="flex-1 flex flex-col items-center justify-center px-4 pb-10 -mt-6">
-<div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 text-xs text-[#94a3b8]">
-                 اعداد وتصميم مشرفة الصيانة/ رشا البلوي  
+      <main className="relative z-10 flex-1 flex flex-col items-center px-4 pt-20 pb-10">
+<div className="fixed bottom-16 left-1/2 -translate-x-1/2 z-50 text-xs text-[#94a3b8] whitespace-nowrap text-center pointer-events-none">
+  إعداد وتصميم مشرفة الصيانة / رشا البلوي
 </div>
-<div className="fixed bottom-10 left-8 text-left font-bold text-[#0ea5a4] leading-relaxed">
-  <div>مركز التأهيل الشامل</div>
-  <div>بمكة المكرمة</div>
-  <div>قسم الإناث</div>
+<div className="fixed bottom-6 left-6 z-20 text-[#14b8a6] font-bold text-sm leading-relaxed">
+  <p>مركز التأهيل الشامل</p>
+  <p>بمكة المكرمة</p>
+  <p>قسم الإناث</p>
 </div>
         {/* ── Hero ── */}
         <div className="w-full max-w-xl text-center mb-8 sm:mb-14 animate-slide-up">
