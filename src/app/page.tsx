@@ -18,29 +18,30 @@ export default function HomePage() {
     height={350}
   />
 </div>
-   <div className="absolute top-24 right-8 z-0 pointer-events-none">
+   <div className="absolute top-20 right-8 z-0 pointer-events-none">
   <Image
     src="/sheww.svg"
     alt="Logo"
-    width={180}
-    height={90}
+    width={150}
+    height={70}
   />
 </div>
+
       
       <main className="relative z-10 flex-1 flex flex-col items-center px-4 pt-20 pb-10">
-        <footer className="fixed bottom-0 left-0 w-full p-4 bg-[var(--page-bg)] z-50 flex items-end justify-center">
+      <footer className="fixed bottom-0 left-0 w-full p-4 bg-[var(--page-bg)] z-50 flex justify-between items-end">
+  
+  {/* جهة اليسار: رشا والصيانة */}
+  <div className="text-xs text-[#94a3b8] flex flex-col items-start pl-4">
+    <p>إعداد وتصميم مشرفة الصيانة / رشا البلوي</p>
+    <p>مركز الصيانة © 2026</p>
+  </div>
 
-  {/* جهة اليسار: مركز التأهيل الشامل (باستخدام absolute) */}
-  <div className="absolute left-4 bottom-4 text-sm font-bold text-[#14b8a6] flex flex-col items-start">
+  {/* جهة اليمين: مركز التأهيل الشامل */}
+  <div className="text-sm font-bold text-[#14b8a6] flex flex-col items-end pr-4">
     <p>مركز التأهيل الشامل</p>
     <p>بمكة المكرمة</p>
     <p>قسم الإناث</p>
-  </div>
-
-  {/* في المنتصف: رشا والصيانة */}
-  <div className="text-xs text-[#94a3b8] flex flex-col items-center">
-    <p>إعداد وتصميم مشرفة الصيانة / رشا البلوي</p>
-    <p>مركز الصيانة © 2026</p>
   </div>
 
 </footer>
