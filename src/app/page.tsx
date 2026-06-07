@@ -19,6 +19,15 @@ export default function HomePage() {
 
   />
 </div>
+<div className="md:hidden fixed top-[100px] left-[5%] w-[90%] z-0 pointer-events-none">
+  <Image 
+    src="/etarmamyyi.png" 
+    alt="Frame Mobile" 
+    width={300} 
+    height={200} 
+    className="w-full h-auto"
+  />
+</div>
   <div className="absolute top-20 right-8 z-0 pointer-events-none" style={{ right: '2rem', left: 'auto' }}>
   <Image
     src="/sheww.svg"
