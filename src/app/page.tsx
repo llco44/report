@@ -19,13 +19,15 @@ export default function HomePage() {
 
   />
 </div>
+  <div className="absolute top-20 right-8 z-0 pointer-events-none" style={{ right: '2rem', left: 'auto' }}>
   <Image
-  src="/sheww.svg"
-  alt="Logo"
-  width={150} // الحجم الأصلي للشاشات الكبيرة
-  height={70}
-  className="w-[80px] h-auto md:w-[150px] md:h-auto" // [80px للجوال] و [150px للابتوب]
-/>
+    src="/sheww.svg"
+    alt="Logo"
+    width={150} 
+    height={70}
+    className="w-[100px] md:w-[150px] h-auto" 
+  />
+</div>
 
       
       <main className="relative z-10 flex-1 flex flex-col items-center px-4 pt-20 pb-10">
